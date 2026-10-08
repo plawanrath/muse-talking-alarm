@@ -1,0 +1,4 @@
+# Target the ESP32-S3 on the Waveshare ESP32-S3-AUDIO-Board.
+CONFIG_IDF_TARGET="esp32s3"
+# The board carries 16 MB flash; without this the image header claims 2 MB.
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y

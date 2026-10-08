@@ -1,0 +1,8 @@
+# Target the ESP32-S3 on the Waveshare ESP32-S3-AUDIO-Board.
+CONFIG_IDF_TARGET="esp32s3"
+# The board carries 16 MB flash; without this the image header claims 2 MB.
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+# The board has no USB-UART bridge; the USB-C port is the native
+# USB-Serial-JTAG peripheral. Make it the full console (input AND output).
+# Without this, logs are mirrored to USB but typed input goes nowhere.
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
